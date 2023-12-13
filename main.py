@@ -1,29 +1,25 @@
-""" Фаил с функциями """
+""" Фаил main """
 
-import markdown
-
-
-def bold(s: str) -> str:
-    """ Функция возвращающая
-        выражение с
-        тегами <em> и </em>
-    """
-    if s[0] == "*" and s[-1] == "*" and s.count("*") == 2:
-        print(markdown.markdown(s))
-        return markdown.markdown(s)
-    else:
-        print(s)
-        return s
+import Fun
 
 
-def itallic(s: str) -> str:
-    """ Функция возвращающая
-            выражение с
-            тегами <strong> и </strong>
-    """
-    if s[:2] == "**" and s[-2:] == "**":
-        print(markdown.markdown(s))
-        return markdown.markdown(s)
-    else:
-        print(s)
-        return s
+while True:
+
+    stroka = input("Введите строку: ")
+
+    print("__МЕНЮ__")
+    print("1. Функция(1)")
+    print("2. Функция(2)")
+    print("3. Выход")
+
+    menu = input("Введите: ")
+
+    match menu:
+        case '1':
+            Fun.bold(stroka)
+        case '2':
+            Fun.itallic(stroka)
+        case '3':
+            break
+        case _:
+            print("Что то не то")
