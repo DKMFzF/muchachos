@@ -14,3 +14,16 @@ def bold(s: str) -> str:
     else:
         print(s)
         return s
+
+
+def itallic(s: str) -> str:
+    """ Функция возвращающая
+            выражение с
+            тегами <strong> и </strong>
+    """
+    if s[:2] == "**" and s[-2:] == "**":
+        print(markdown.markdown(s))
+        return markdown.markdown(s)
+    else:
+        print(s)
+        return s
