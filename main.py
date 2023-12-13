@@ -23,3 +23,4 @@ while True:
             break
         case _:
             print("Что то не то")
+            
